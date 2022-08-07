@@ -20,7 +20,7 @@ class HandlerCommands(Handler):
         # xabarga ishlov berish dekoratori
         @self.bot.message_handler(commands=['start'])
         def handle(message):
-            print(type(message))
+
             if message.text == '/start':
                 self.pressed_btn_start(message)
 
