@@ -3,7 +3,7 @@ from settings import config
 from handlers.handler_main import HandlerMain
 
 
-class TeleBot:
+class TelBot:
 
     __version__ = config.VERSION
     __author__ = config.AUTHOR
@@ -12,7 +12,6 @@ class TeleBot:
         """
         Botni foalashtirish
         """
-
         self.token = config.TOKEN
         self.bot = TeleBot(self.token)
         self.handler = HandlerMain(self.bot)
@@ -28,7 +27,7 @@ class TeleBot:
 
 
 if __name__ == '__main__':
-    bot = TeleBot()
+    bot = TelBot()
     bot.run_bot()
 
 

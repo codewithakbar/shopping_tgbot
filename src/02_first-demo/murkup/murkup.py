@@ -1,4 +1,4 @@
-from telebot.types import KeyboardButton
+from telebot.types import KeyboardButton, ReplyKeyboardMarkup
 from settings import config
 from data_base.db_alchemy import DBManager
 
@@ -19,3 +19,17 @@ class Keyboards:
         return KeyboardButton(config.KEYBOARD[name])
 
 
+    def start_menu(self):
+        """
+        create buttons on menu
+        """
+        self.markup = ReplyKeyboardMarkup(True, True)
+        itm_btn_1 = self.set_btn('CHOOSE_GOODS')
+        itm_btn_2 = self.set_btn('INFO')
+        itm_btn_3 = self.set_btn('SETTINGS')
+        # Buttnlar joylashuvi
+        self.markup.row(itm_btn_1)
+        self.markup.row(itm_btn_2, itm_btn_3)
+        return self.markup
+
+    
