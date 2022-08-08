@@ -15,6 +15,16 @@ class HandlerAllText(Handler):
         self.step = 0
 
 
+    def pressed_btn_category(self, message):
+        """
+        Maxsulot tanlashni bosganta tovar chiqrib beradi
+        """
+        self.bot.send_message(message.chat.id, "Maxsulot katalogi",
+                              reply_markup=self.keybords.remove_menu())
+        self.bot.send_message(message.chat.id, "O'z tanlovingizni qiling",
+                              reply_markup=self.keybords.category_menu())
+
+
     def pressed_btn_info(self, message):
         """
         Do'kon haqda info
@@ -40,12 +50,16 @@ class HandlerAllText(Handler):
         self.bot.send_message(message.chat.id, "Siz orqaga qaytingiz",
                                 reply_markup=self.keybords.start_menu())
 
+
     
     def handle(self):
 
         @self.bot.message_handler(func=lambda message: True)
         def handle(message):
             # * * * * * * * * Menu * * * * * * * * * #
+
+            if message.text == config.KEYBOARD['CHOOSE_GOODS']:
+                self.pressed_btn_category(message)
 
             if message.text == config.KEYBOARD['INFO']:
                 self.pressed_btn_info(message)
