@@ -14,6 +14,7 @@ class HandlerAllText(Handler):
         # maxsulot qatori
         self.step = 0
 
+
     def pressed_btn_info(self, message):
         """
         Do'kon haqda info
@@ -21,6 +22,7 @@ class HandlerAllText(Handler):
         self.bot.send_message(message.chat.id, MESSAGES['trading_store'],
                               parse_mode="HTML",
                               reply_markup=self.keybords.info_menu())
+
 
     def pressed_btn_settings(self, message):
         """

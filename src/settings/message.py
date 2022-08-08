@@ -19,32 +19,32 @@ va qulay shaklda omborga murojaat qiladi
 buyurtmani keyingi sotib olish uchun firmalar.
 
 """
-# ответ пользователю при посещении блока "Настройки"
+# Sozlamaga kirganda javob beradi
 settings = """
-<b>Общее руководство приложением:</b>
+<b>Umumiy dastur boshqaruvi:</b>
 
-<i>Навигация:</i>
+<i>Navigatsiya:</i>
 
--<b>({}) - </b><i>назад</i>
--<b>({}) - </b><i>вперед</i>
--<b>({}) - </b><i>увеличить</i>
--<b>({}) - </b><i>уменьшить</i>
--<b>({}) - </b><i>следующий</i>
--<b>({}) - </b><i>предыдующий</i>
+-<b>({}) - </b><i>orqaga</i>
+-<b>({}) - </b><i>oldinga</i>
+-<b>({}) - </b><i>ko'paytirish</i>
+-<b>({}) - </b><i>pasaytirish</i>
+-<b>({}) - </b><i>keyingisi</i>
+-<b>({}) - </b><i>oldingi</i>
 
-<i>Специальные кнопки:</i>
+<i>Maxsus tugmalar:</i>
 
--<b>({}) - </b><i>удалить</i>
--<b>({}) - </b><i>заказ</i>
--<b>({}) - </b><i>Оформить заказ</i>
+-<b>({}) - </b><i>o\'chirish</i>
+-<b>({}) - </b><i>buyurtma</i>
+-<b>({}) - </b><i>Hisob-kitob</i>
 
-<i>Общая информация:</i>
+<i>Umumiy ma\'lumot:</i>
 
--<b>версия программы: - </b><i>({})</i>
--<b>разработчик: - </b><i>({})</i>
+-<b>Dastur versiyasi: - </b><i>({})</i>
+-<b>Ishlab chiqaruvchi(Dasturchi): - </b><i><a href="http://t.me/satipoff">({})</a></i>
 
 
-<b>{}Ваше имя</b>
+<b>{} Akbar Satipov</b>
 
 """.format(
     KEYBOARD['<<'],
@@ -62,47 +62,47 @@ settings = """
 )
 # ответ пользователю при добавлении товара в заказ
 product_order = """
-Выбранный товар:
+Tanlangan maxsulot:
 
 {}
 {}
-Cтоимость: {} руб
+Narxi: {} so\'m
 
-добавлен в заказ!!!
+buyurtmaga qo'shiladi!!!
 
-На складе осталось {} ед. 
+Zaxirada {} ta birlik qoldi.
 """
 # ответ пользователю при посещении блока с заказом
 order = """
 
-<i>Название:</i> <b>{}</b>
+<i>Nomi:</i> <b>{}</b>
 
-<i>Описание:</i> <b>{}</b>
+<i>Ta\'rif:</i> <b>{}</b>
 
-<i>Cтоимость:</i> <b>{} руб за 1 ед.</b>
+<i>Narxi:</i> <b>1 dona uchun {} so\'m.</b>
 
-<i>Количество позиций:</i> <b>{} ед.</b> 
+<i>Pozitsiyalar soni:</i> <b>{} dona.</b> 
 """
 
 order_number = """
 
-<b>Позиция в заказе № </b> <i>{}</i>
+<b>Buyurtma raqami. № </b> <i>{}</i>
 
 """
 # ответ пользователю, когда заказа нет
 no_orders = """
-<b>Заказ отсутствует !!!</b>
+<b>Buyurtma yo'q !!!</b>
 """
 # ответ пользователю при подтверждении оформления заказа
 applay = """
-<b>Ваш заказ оформлен !!!</b>
+<b>Buyurtmangiz qabul qilindi !!!</b>
 
-<i>Общая стоимость заказа составляет:</i> <b>{} руб</b>
+<i>Buyurtmaning umumiy qiymati:</i> <b>{} so\'m</b>
 
-<i>Общее количество позиций составляет:</i> <b>{} ед.</b>
+<i>Jami pozitsiyalar soni:</i> <b>{} dona.</b>
 
-<b>ЗАКАЗ НАПРАВЛЕН НА СКЛАД,
-ДЛЯ ЕГО КОМПЛЕКТОВКИ !!!</b>
+<b>Buyurtma omborga yuborildi,
+UNING QADOQLASH UCHUN !!!</b>
 """
 # словарь ответов пользователю
 MESSAGES = {
