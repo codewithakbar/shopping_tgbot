@@ -51,6 +51,17 @@ class HandlerAllText(Handler):
                                 reply_markup=self.keybords.start_menu())
 
 
+    def pressed_btn_product(self, message, product):
+        """
+        Qaroche ozlariz chuninglar
+        """
+        self.bot.send_message(message.chat.id, 'Категория ' +
+                              config.KEYBOARD[product],
+                              reply_markup=self.keybords.set_select_category(
+                                  config.CATEGORY[product]))
+        self.bot.send_message(message.chat.id, "Ок",
+                              reply_markup=self.keybords.category_menu())
+
     
     def handle(self):
 
@@ -70,3 +81,13 @@ class HandlerAllText(Handler):
             if message.text == config.KEYBOARD['<<']:
                 self.pressed_btn_back(message)
             
+            # * * * * * * menu (Kategoriya maxsuloti, YM, muzqaymoq...) * * * * #
+
+            if message.text == config.KEYBOARD['SEMIPRODUCT']:
+                self.pressed_btn_product(message, 'SEMIPRODUCT')
+
+            if message.text == config.KEYBOARD['GROCERY']:
+                self.pressed_btn_product(message, 'GROCERY')
+
+            if message.text == config.KEYBOARD['ICE_CREAM']:
+                self.pressed_btn_product(message, 'ICE_CREAM')
