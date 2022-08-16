@@ -9,7 +9,7 @@ from models.product import Products
 
 
 # deklarativ uslubni ishga tushirish
-Base = declarative_base()
+from data_base.dbcore import Base
 
 class Order(Base):
     """

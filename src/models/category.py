@@ -4,7 +4,7 @@ from sqlalchemy import Column, String, Integer, Boolean
 from sqlalchemy.ext.declarative import declarative_base
 
 # deklarativ uslubni ishga tushirish
-Base = declarative_base()
+from data_base.dbcore import Base
 
 
 class Category(Base):

@@ -4,8 +4,8 @@ from emoji import emojize
 
 
 TOKEN = '5207577524:AAFWyFgWKd_yZCzSqiULfKNZ2GQb8yWI-h0'
-NAME_DB = 'products.sqlite'
-VERSION = '0.0.1'
+NAME_DB = 'products.db'
+VERSION = '0.1.1'
 AUTHOR = 'Satipoff'
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
