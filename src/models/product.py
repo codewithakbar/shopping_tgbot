@@ -3,7 +3,6 @@ from sqlalchemy import Column, String, Integer, Float, Boolean, ForeignKey
 # jadvalni ulash modulini import qiling
 from sqlalchemy.orm import relationship, backref
 # sqlalchemy bilan deklarativ ish uslubi bilan ishlash uchun konstruktor klassi
-from sqlalchemy.ext.declarative import declarative_base
 # import qilish model modellar to'plami uchun kategoriya
 from models.category import Category
 
@@ -36,7 +35,7 @@ class Products(Base):
                         uselist=True,
                         cascade='delete, all'))
 
-    def __str__(self):
+    def __repr__(self):
         return f"{self.name} {self.title} {self.price}"
 
 

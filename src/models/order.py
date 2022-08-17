@@ -35,5 +35,5 @@ class Order(Base):
                         uselist=True,
                         cascade='delete,all'))
 
-    def __str__(self):
+    def __repr__(self):
         return f"{self.quantity} {self.data}"
